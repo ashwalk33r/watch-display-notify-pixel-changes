@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+using System.Drawing;
 
 Config.Item config = Config.get();
 string debugSavePath = "../tmp/screenshot.png";
@@ -23,7 +23,10 @@ while (await periodicTimer.WaitForNextTickAsync()) {
 
         Console.WriteLine(diff);
 
-        screenshotA = screenshotB; // continous operation
+        // continous operation
+        screenshotA = screenshotB;
+
+        GarbageCollector.execute();
     });
 }
 
