@@ -1,4 +1,9 @@
 .idea
+.vs/
+cli/screenshot/windows-os/config.json
+cli/screenshot/windows-os/tmp/
+cli/screenshot/windows-os/src/bin/
+cli/screenshot/windows-os/src/obj/
 
 # Logs
 logs

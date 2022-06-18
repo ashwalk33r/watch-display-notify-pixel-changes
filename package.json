@@ -1,0 +1,31 @@
+{
+  "name": "watch-display-notify-pixel-changes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "16"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node ./nodejs/main.js"
+  },
+  "dependencies": {
+    "gkm": "0",
+    "play-sound": "1",
+    "rxjs": "^7.5.5",
+    "rxjs-shell": "^3.1.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwalk33r/watch-display-notify-pixel-changes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashwalk33r/watch-display-notify-pixel-changes/issues"
+  },
+  "homepage": "https://github.com/ashwalk33r/watch-display-notify-pixel-changes#readme"
+}
