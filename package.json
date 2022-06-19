@@ -12,11 +12,11 @@
   },
   "dependencies": {
     "gkm": "0",
+    "lodash.throttle": "^4.1.1",
     "play-sound": "1",
     "rxjs": "^7.5.5",
     "rxjs-shell": "^3.1.2"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ashwalk33r/watch-display-notify-pixel-changes.git"
