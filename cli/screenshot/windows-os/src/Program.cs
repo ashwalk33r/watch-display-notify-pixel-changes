@@ -23,6 +23,12 @@ while (await periodicTimer.WaitForNextTickAsync()) {
 
         Console.WriteLine(diff);
 
+        if (config.saveOnTreshold > 0 && diff > config.saveOnTreshold)  {
+            string date = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
+            string tresholdSavePath = String.Format("../tmp/{0}_{1}.png", date, diff.ToString());
+            Image.saveScreenshot(screenshotA, tresholdSavePath);
+        }
+
         // continous operation
         screenshotA = screenshotB;
 
