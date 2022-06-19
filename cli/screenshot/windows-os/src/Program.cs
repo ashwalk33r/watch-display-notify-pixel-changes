@@ -23,7 +23,7 @@ while (await periodicTimer.WaitForNextTickAsync()) {
 
         Console.WriteLine(diff);
 
-        if (config.saveOnTreshold > 0 && diff > config.saveOnTreshold)  {
+        if (config.saveOnThreshold > 0 && diff > config.saveOnThreshold)  {
             string date = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
             string tresholdSavePath = String.Format("../tmp/{0}_{1}.png", date, diff.ToString());
             Image.saveScreenshot(screenshotA, tresholdSavePath);

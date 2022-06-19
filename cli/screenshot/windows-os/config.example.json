@@ -1,6 +1,6 @@
 {
 	"windowName": "Untitled - Notepad",
-	"saveOnTreshold": "400",
+	"saveOnThreshold": "800",
 	"delay": "1000",
 	"cropX": "700",
 	"cropY": "590",

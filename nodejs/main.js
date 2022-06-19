@@ -1,18 +1,15 @@
 import { filter } from 'rxjs/operators';
-import { readFileSync } from 'fs';
 
 import { alarm } from './alarm.js';
+import { config } from './config.js';
 import diff$ from './diff.observable.js';
 
-const { saveOnTreshold } = JSON.parse(readFileSync('./cli/screenshot/windows-os/config.json').toString());
-
-alarm.set(true);
-setTimeout(() => alarm.set(false), 5000)
+const { saveOnThreshold } = config;
 
 diff$
     .pipe(
-        filter((diff) => diff > saveOnTreshold)
+        filter((diff) => diff > saveOnThreshold)
     )
-    .subscribe((diff) => {
-
+    .subscribe(() => {
+        alarm.set(true);
     });

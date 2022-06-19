@@ -21,7 +21,7 @@ class Config
     public class Item
     {
         public string windowName;
-        public int saveOnTreshold;
+        public int saveOnThreshold;
         public int delay;
         public int cropX;
         public int cropY;
