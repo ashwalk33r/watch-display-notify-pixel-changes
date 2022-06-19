@@ -1,8 +1,9 @@
 {
 	"windowName": "Untitled - Notepad",
+	"saveOnTreshold": "400",
 	"delay": "1000",
-	"cropX": "60",
+	"cropX": "700",
 	"cropY": "590",
-	"cropWidth": "1000",
-	"cropHeight": "700"
+	"cropWidth": "370",
+	"cropHeight": "660"
 }

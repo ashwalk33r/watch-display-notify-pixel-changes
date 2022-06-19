@@ -1,4 +1,4 @@
-import { map, filter, takeWhile, takeLast, skipUntil } from 'rxjs/operators';
+import { map, filter, takeWhile, skipUntil } from 'rxjs/operators';
 import { spawn, trim } from 'rxjs-shell';
 
 const source$ = spawn('powershell.exe', [`cd ./cli/screenshot/windows-os/bin/ ; ./run.ps1`])
@@ -10,12 +10,7 @@ const source$ = spawn('powershell.exe', [`cd ./cli/screenshot/windows-os/bin/ ; 
 
 const ready$ = source$
     .pipe(
-        map((data) => {
-            console.log(data);
-            return data;
-        }),
         takeWhile((data) => data.indexOf('SCREENSHOT COMPARISON STARTED...') === -1),
-        takeLast(1)
     );
 
 const diff$ = source$.pipe(
@@ -23,5 +18,7 @@ const diff$ = source$.pipe(
     map((data) => parseInt(data, 10)),
     filter((data) => false === isNaN(data))
 );
+
+ready$.subscribe(console.log);
 
 export default diff$;

@@ -1,5 +1,14 @@
+import { filter } from 'rxjs/operators';
+import { readFileSync } from 'fs';
+
 import diff$ from './diff.observable.js';
 
-diff$.subscribe((diff) => {
-    console.log(diff);
-});
+const { saveOnTreshold } = JSON.parse(readFileSync('./cli/screenshot/windows-os/config.json').toString());
+
+diff$
+    .pipe(
+        filter((diff) => diff > saveOnTreshold)
+    )
+    .subscribe((diff) => {
+        console.log(diff);
+    });
